@@ -1,5 +1,5 @@
 # fitster.zsh-theme
-Modified version of 'gitster' theme from ZIM.
+Modified version of 'gitster' theme for ZIM.
 ### Changes:
 1. Use full `pwd` instead of `short_pwd`
 2. Verbose `git-info` will show repo as dirty on untracked files.

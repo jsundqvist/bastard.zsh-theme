@@ -38,11 +38,15 @@ prompt_fitster_setup() {
   zstyle ':zim:git-info:commit' format '%c'
   zstyle ':zim:git-info:clean' format '%F{green}✓'
   zstyle ':zim:git-info:dirty' format '%F{red}✗'
+  zstyle ':zim:git-info:behind' format ' %F{magenta}↓'
+  zstyle ':zim:git-info:ahead' format ' %F{cyan}↑'
+  zstyle ':zim:git-info:diverged' format ' %F{yellow}⇵'
+  zstyle ':zim:git-info:action' format ' %F{white}[%s]'
   zstyle ':zim:git-info:keys' format \
-    'prompt' ' %F{cyan}%b%c %C%D'
+    'prompt' ' %F{cyan}%b%c %C%D%B%A%V%s'
 
   PS1="${prompt_fitster_status}\$(prompt_fitster_pwd)\$(prompt_fitster_git)%f "
-  RPS1=''
+  RPS1='%F{8}${SSH_TTY:+%n@%m}%f'
 }
 
 prompt_fitster_setup "${@}"

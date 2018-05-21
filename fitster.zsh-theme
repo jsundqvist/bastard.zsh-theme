@@ -41,7 +41,10 @@ prompt_fitster_setup() {
   zstyle ':zim:git-info:behind' format ' %F{magenta}↓'
   zstyle ':zim:git-info:ahead' format ' %F{cyan}↑'
   zstyle ':zim:git-info:diverged' format ' %F{yellow}⇵'
-  zstyle ':zim:git-info:action' format ' %F{white}[%s]'
+  zstyle ':zim:git-info:action' format ' %F{white}%s'
+  zstyle ':zim:git-info:action:bisect' format '←→'
+  zstyle ':zim:git-info:action:merge'  format '→←'
+  zstyle ':zim:git-info:action:rebase' format '→→'
   zstyle ':zim:git-info:keys' format \
     'prompt' ' %F{cyan}%b%c %C%D%B%A%V%s'
 

@@ -34,8 +34,8 @@ prompt_fitster_setup() {
   prompt_opts=(cr percent sp subst)
 
   zstyle ':zim:git-info' verbose 'yes'
-  zstyle ':zim:git-info:branch' format '%b'
-  zstyle ':zim:git-info:commit' format '%c'
+  zstyle ':zim:git-info:branch' format '$([[ %b = master ]] && echo %F{white}%b || echo %F{cyan}%b)'
+  zstyle ':zim:git-info:commit' format '%F{blue}%c'
   zstyle ':zim:git-info:clean' format '%F{green}✓'
   zstyle ':zim:git-info:dirty' format '%F{red}✗'
   zstyle ':zim:git-info:behind' format ' %F{magenta}↓'
@@ -46,7 +46,7 @@ prompt_fitster_setup() {
   zstyle ':zim:git-info:action:merge'  format '→←'
   zstyle ':zim:git-info:action:rebase' format '→→'
   zstyle ':zim:git-info:keys' format \
-    'prompt' ' %F{cyan}%b%c %C%D%B%A%V%s'
+    'prompt' ' %b%c %C%D%B%A%V%s'
 
   PS1="${prompt_fitster_status}\$(prompt_fitster_pwd)\$(prompt_fitster_git)%f "
   RPS1='%F{8}${SSH_TTY:+%n@%m}%f'

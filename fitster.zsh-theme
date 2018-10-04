@@ -49,7 +49,7 @@ prompt_fitster_setup() {
     'prompt' ' %b%c %C%D%B%A%V%s'
 
   PS1="${prompt_fitster_status}\$(prompt_fitster_pwd)\$(prompt_fitster_git)%f "
-  RPS1='%F{8}${SSH_TTY:+%n@%m}%f'
+  RPS1='%F{black}%D{%R}'
 }
 
 prompt_fitster_setup "${@}"

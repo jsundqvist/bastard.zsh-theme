@@ -45,6 +45,7 @@ prompt_fitster_setup() {
   zstyle ':zim:git-info:action:bisect' format '←→'
   zstyle ':zim:git-info:action:merge'  format '→←'
   zstyle ':zim:git-info:action:rebase' format '→→'
+  zstyle ':zim:git-info:action:cherry-pick' format '→⃝'
   zstyle ':zim:git-info:keys' format \
     'prompt' ' %b%c %C%D%B%A%V%s'
 

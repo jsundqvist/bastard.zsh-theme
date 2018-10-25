@@ -1,7 +1,7 @@
 # vim:et sts=2 sw=2 ft=zsh
 #
-# bastard theme
-# https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme
+# bastard theme based on gitster
+# https://github.com/zimfw/zimfw/blob/master/modules/prompt/themes/gitster.zsh-theme
 #
 # Requires the `git-info` zmodule to be included in the .zimrc file.
 

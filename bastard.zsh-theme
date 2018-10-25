@@ -1,11 +1,11 @@
 # vim:et sts=2 sw=2 ft=zsh
 #
-# fitster theme
-# https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/fitster.zsh-theme
+# bastard theme
+# https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme
 #
 # Requires the `git-info` zmodule to be included in the .zimrc file.
 
-prompt_fitster_pwd() {
+prompt_bastard_pwd() {
   pwd=$(pretty_pwd)
   git_root=$(command git rev-parse --show-toplevel 2> /dev/null) && pwd=${pwd#${$(pretty_pwd $git_root):h}/}
   repo=${git_root:t}
@@ -18,18 +18,18 @@ pretty_pwd() {
   print ${pwd}
 }
 
-prompt_fitster_git() {
+prompt_bastard_git() {
   [[ -n ${git_info} ]] && print -n "${(e)git_info[prompt]}"
 }
 
-prompt_fitster_precmd() {
+prompt_bastard_precmd() {
   (( ${+functions[git-info]} )) && git-info
 }
 
-prompt_fitster_setup() {
-  local prompt_fitster_status='%(?:%F{green}:%F{red})➜ '
+prompt_bastard_setup() {
+  local prompt_bastard_status='%(?:%F{green}:%F{red})➜ '
 
-  autoload -Uz add-zsh-hook && add-zsh-hook precmd prompt_fitster_precmd
+  autoload -Uz add-zsh-hook && add-zsh-hook precmd prompt_bastard_precmd
 
   prompt_opts=(cr percent sp subst)
 
@@ -49,8 +49,8 @@ prompt_fitster_setup() {
   zstyle ':zim:git-info:keys' format \
     'prompt' ' %b%c %C%D%B%A%V%s'
 
-  PS1="${prompt_fitster_status}\$(prompt_fitster_pwd)\$(prompt_fitster_git)%f "
+  PS1="${prompt_bastard_status}\$(prompt_bastard_pwd)\$(prompt_bastard_git)%f "
   RPS1='%F{black}%D{%R}'
 }
 
-prompt_fitster_setup "${@}"
+prompt_bastard_setup "${@}"

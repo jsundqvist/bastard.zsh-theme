@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rm $HOME/.zim/modules/prompt/functions/prompt_fitster_setup
+rm $HOME/.zim/modules/prompt/functions/prompt_bastard_setup

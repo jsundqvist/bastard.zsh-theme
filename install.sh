@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ln -s $(pwd)/fitster.zsh-theme $HOME/.zim/modules/prompt/functions/prompt_fitster_setup
+ln -s $(pwd)/bastard.zsh-theme $HOME/.zim/modules/prompt/functions/prompt_bastard_setup

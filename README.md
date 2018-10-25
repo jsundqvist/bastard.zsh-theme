@@ -1,4 +1,4 @@
-# fitster.zsh-theme
+# bastard.zsh-theme
 Modified version of 'gitster' theme for [ZIM](https://github.com/zimfw/zimfw).
 ### Changes:
 1. Use full `pwd` instead of `short_pwd`

@@ -41,7 +41,7 @@ prompt_bastard_setup() {
   zstyle ':zim:git-info:indexed' format '%F{green}+'
   zstyle ':zim:git-info:unindexed' format '%F{red}∗'
   zstyle ':zim:git-info:untracked' format '%F{red}✗'
-  zstyle ':zim:git-info:stashed' format ' %F{yellow}∗'
+  zstyle ':zim:git-info:stashed' format '%F{yellow}∗'
   zstyle ':zim:git-info:behind' format ' %F{magenta}↓'
   zstyle ':zim:git-info:ahead' format ' %F{cyan}↑'
   zstyle ':zim:git-info:diverged' format ' %F{yellow}⇵'

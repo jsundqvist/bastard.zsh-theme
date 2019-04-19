@@ -50,6 +50,9 @@ prompt_bastard_setup() {
   zstyle ':zim:git-info:action:merge'  format '→←'
   zstyle ':zim:git-info:action:rebase' format '→→'
   zstyle ':zim:git-info:action:cherry-pick' format '→⃝'
+  zstyle ':zim:git-info:action:rebase-merge'  format '→→←'
+  zstyle ':zim:git-info:action:rebase-interactive' format '→→ -i'
+  zstyle ':zim:git-info:action:cherry-pick-sequence' format '→⃝→'
   zstyle ':zim:git-info:keys' format \
     'prompt' ' %b%c %C%u%I%i%S%B%A%V%s'
 

@@ -27,7 +27,7 @@ prompt_bastard_precmd() {
 }
 
 prompt_bastard_setup() {
-  local prompt_bastard_status='$([[ "$USER" =~ ^(root|docker|rancher)$ ]] && echo "%(?:%F{blue}:%F{magenta})" || echo "%(?:%F{green}:%F{red})" )➜ '
+  local prompt_bastard_status='$([[ "$USER" =~ ^(|root|docker|rancher)$ ]] && echo "%(?:%F{blue}:%F{magenta})" || echo "%(?:%F{green}:%F{red})" )➜ '
 
   autoload -Uz add-zsh-hook && add-zsh-hook precmd prompt_bastard_precmd
 

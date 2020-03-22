@@ -16,16 +16,17 @@ $ echo 'zmodule https://github.com/jsundqvist/bastard.zsh-theme -n bastard' >> $
 $ zimfw install
 $ zsh # restart again
 ```
-### Dockerfile example
+### Awesome Dockerfile
 ```
 FROM bitnami/minideb
 
-RUN apt-get update && apt-get install nano curl wget unzip zip tree git zsh -y && \
+RUN install_packages apt-transport-https ca-certificates nano curl wget unzip zip tree git zsh jq -y && \
     echo 'set linenumbers' >> ~/.nanorc && \
     echo 'set tabsize 4' >> ~/.nanorc && \
     git config --global pull.rebase true
 SHELL ["zsh", "-ic"]
-RUN curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh && \
+RUN update-ca-certificates && \
+    curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh && \
     echo 'zmodule https://github.com/jsundqvist/bastard.zsh-theme -n bastard' >> $HOME/.zimrc && \
     zsh -ic "zimfw install"
 CMD ["zsh"]

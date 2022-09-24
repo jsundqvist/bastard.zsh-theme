@@ -3,7 +3,7 @@ Modified version of [`gitster`](https://github.com/zimfw/zimfw/blob/master/modul
 ### Installation
 1. Install Zsh (Debian)
 ```
-$ sudo apt update && sudo apt install git zsh -y
+$ sudo apt update && sudo apt install git curl zsh -y
 ```
 2. [Install ZIM](https://github.com/zimfw/zimfw#installation)
 ```

@@ -34,7 +34,8 @@ prompt_bastard_setup() {
   prompt_opts=(cr percent sp subst)
 
   zstyle ':zim:git-info' verbose 'yes'
-  zstyle ':zim:git-info:branch' format '$([[ %b = master ]] && echo %F{white}%b || echo %F{cyan}%b)'
+  zstyle ':zim:git-info' ignore-submodules 'none'
+  zstyle ':zim:git-info:branch' format '$([[ %b = master ]] || [[ %b = main ]] && echo %F{white}%b || echo %F{cyan}%b)'
   zstyle ':zim:git-info:commit' format '%F{blue}%c'
   zstyle ':zim:git-info:clean' format '%F{green}✓'
   #zstyle ':zim:git-info:dirty' format '%F{red}✗'

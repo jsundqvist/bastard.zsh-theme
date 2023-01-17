@@ -37,7 +37,7 @@ CMD ["zsh"]
 3. Red dirty instead of yellow.
 4. Symbols for `ahead`, `behind`, `diverged`, `bisect`, `merge`, `rebase` and `cherry-pick`.
 5. Yellow repo.
-6. Cyan branch if not `master`.
+6. Cyan branch if not `master` or `main`.
 7. Timestamp in `RPROMPT`
 ### Pretty picture
 ![Gnome](img/gnome.png)
